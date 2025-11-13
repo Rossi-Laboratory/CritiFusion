@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ```
 
 Set your Together API key:
-🔗 [https://platform.together.xyz/models](https://api.together.xyz/sso-signin?redirectUrl=%2Fsettings%2Fapi-keys)
+🔗 [https://api.together.xyz/sso-signin?redirectUrl=%2Fsettings%2Fapi-keys)
 ```bash
 export TOGETHER_API_KEY=your_key_here
 ```
