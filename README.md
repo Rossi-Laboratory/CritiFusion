@@ -1,5 +1,6 @@
 # CritiFusion: Semantic and Spectral Refinement for Text-to-Image Diffusion
-paper ID 9907 cvpr 2025
+<p align="center"><b> **paper ID 9907** </b></p>
+
 
 CritiFusion is an inference‑time refinement framework designed to enhance semantic alignment and visual quality in text‑to‑image diffusion models. It operates as a plug‑in stage that works with existing SDXL pipelines without any additional training.
 <p align="center">
