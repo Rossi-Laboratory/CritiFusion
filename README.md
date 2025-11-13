@@ -18,9 +18,9 @@ Together, these components yield stronger semantic alignment and more realistic 
 </p>
 
 <p align="center">
-  <img src="img/fig4-1.png" width="32%">
-  <img src="img/fig4-2.png" width="32%">
-  <img src="img/fig4-3.png" width="32%">
+  <img src="img/fig 4-1.png" width="32%">
+  <img src="img/fig 4-2.png" width="32%">
+  <img src="img/fig 4-3.png" width="32%">
 </p>
 
 ## Installation
