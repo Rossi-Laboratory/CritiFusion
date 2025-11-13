@@ -1,7 +1,9 @@
 # CritiFusion: Semantic and Spectral Refinement for Text-to-Image Diffusion
 
 CritiFusion is an inference‑time refinement framework designed to enhance semantic alignment and visual quality in text‑to‑image diffusion models. It operates as a plug‑in stage that works with existing SDXL pipelines without any additional training.
-
+<p align="center">
+  <img src="img/fig1.png" width="85%">
+</p>
 ## Overview
 
 Recent diffusion models achieve impressive photorealism but often fail on complex textual instructions. CritiFusion addresses this gap with two key modules:
@@ -11,12 +13,13 @@ Recent diffusion models achieve impressive photorealism but often fail on comple
 
 Together, these components yield stronger semantic alignment and more realistic images, matching or surpassing reward‑optimized baselines while remaining fully training‑free.
 
-## Architecture
+## Method
 
 <p align="center">
   <img src="img/fig2.png" width="85%">
 </p>
 
+## Gallery
 <p align="center">
   <img src="img/fig 4-1.png" width="32%">
   <img src="img/fig 4-2.png" width="32%">
@@ -30,7 +33,7 @@ pip install -r requirements.txt
 ```
 
 Set your Together API key:
-
+🔗 [https://platform.together.xyz/models](https://api.together.xyz/sso-signin?redirectUrl=%2Fsettings%2Fapi-keys)
 ```bash
 export TOGETHER_API_KEY=your_key_here
 ```
@@ -40,7 +43,7 @@ export TOGETHER_API_KEY=your_key_here
 CritiFusion relies on Together AI hosted models. Their availability may change over time.  
 If an LLM or VLM returns an API error, check the latest supported models:
 
-🔗 https://platform.together.xyz/models
+
 
 Update **Cell 2** of the notebook where model lists are defined:
 
