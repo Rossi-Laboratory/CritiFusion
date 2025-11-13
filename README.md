@@ -1,4 +1,5 @@
 # CritiFusion: Semantic and Spectral Refinement for Text-to-Image Diffusion
+paper ID 9907 cvpr 2025
 
 CritiFusion is an inference‑time refinement framework designed to enhance semantic alignment and visual quality in text‑to‑image diffusion models. It operates as a plug‑in stage that works with existing SDXL pipelines without any additional training.
 <p align="center">
@@ -33,7 +34,7 @@ Together, these components yield stronger semantic alignment and more realistic 
 pip install -r requirements.txt
 ```
 
-🔗 Set your api key [Together API Key](https://api.together.xyz/settings/api-keys)
+🔗 Set your [Together API Key](https://api.together.xyz/settings/api-keys)
 ```bash
 export TOGETHER_API_KEY=your_key_here
 ```
