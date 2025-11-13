@@ -33,7 +33,7 @@ Together, these components yield stronger semantic alignment and more realistic 
 pip install -r requirements.txt
 ```
 
-🔗 Set your api key[Together API Key][https://api.together.xyz/sso-signin?redirectUrl=%2Fsettings%2Fapi-keys)
+🔗 Set your api key [Together API Key](https://api.together.xyz/settings/api-keys)
 ```bash
 export TOGETHER_API_KEY=your_key_here
 ```
