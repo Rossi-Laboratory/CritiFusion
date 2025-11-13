@@ -1,5 +1,5 @@
 # CritiFusion: Semantic and Spectral Refinement for Text-to-Image Diffusion
-<div align="center"><strong><font size="12">Paper ID 9907</font></strong></div>
+<div align="center"><strong><font size="18">Paper ID 9907</font></strong></div>
 
 
 
