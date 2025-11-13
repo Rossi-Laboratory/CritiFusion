@@ -79,9 +79,45 @@ The notebook will guide you through:
 - Frequency‑domain fusion  
 - Final image synthesis  
 
+#📊 Evaluation Metrics Explained
+
+To assess the performance of different SD v1.5-based text-to-image generation methods, we report the following human-aligned metrics:
+
+1. PickScore↑
+
+Measures overall human preference for image quality and prompt relevance.
+
+Higher values indicate that the generated image is more favored by humans in pairwise comparisons.
+
+Commonly used to benchmark perceptual alignment.
+
+2. HPSv2↑ (Human Preference Score v2)
+
+Evaluates prompt adherence, i.e., how well the image reflects the content described in the text prompt.
+
+Derived from large-scale crowd-sourced comparisons, focusing on semantic fidelity.
+
+3. ImageReward↑
+
+A learned reward model that scores how well the image matches the given text.
+
+It incorporates both content alignment and visual realism from a machine-learning perspective.
+
+Can return negative values if alignment is poor.
+
+4. Aesthetic↑
+
+A text-agnostic metric assessing only the visual appeal of the image (e.g., color harmony, composition).
+
+Outputs a scalar score predicted by an aesthetic model (e.g., LAION-Aesthetics v2).
+
 ## Results
 
-(Insert your result tables or metrics images here)
+## Gallery
+<p align="center">
+  <img src="img/tab1.png" width="50%">
+  <img src="img/tab2.png" width="50%">
+</p>
 
 CritiFusion demonstrates consistent improvements on alignment and aesthetic metrics such as PickScore, HPSv2, ImageReward, and Aesthetic Score.
 
