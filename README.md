@@ -4,6 +4,7 @@ CritiFusion is an inference‑time refinement framework designed to enhance sema
 <p align="center">
   <img src="img/fig1.png" width="100%">
 </p>
+
 ## Overview
 
 Recent diffusion models achieve impressive photorealism but often fail on complex textual instructions. CritiFusion addresses this gap with two key modules:
