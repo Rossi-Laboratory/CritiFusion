@@ -14,13 +14,13 @@ Together, these components yield stronger semantic alignment and more realistic 
 ## Architecture
 
 <p align="center">
-  <img src="fig2.png" width="85%">
+  <img src="img/fig2.png" width="85%">
 </p>
 
 <p align="center">
-  <img src="fig4-1.png" width="32%">
-  <img src="fig4-2.png" width="32%">
-  <img src="fig4-3.png" width="32%">
+  <img src="img/fig4-1.png" width="32%">
+  <img src="img/fig4-2.png" width="32%">
+  <img src="img/fig4-3.png" width="32%">
 </p>
 
 ## Installation
