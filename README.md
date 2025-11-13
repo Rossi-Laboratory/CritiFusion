@@ -79,7 +79,8 @@ The notebook will guide you through:
 - Frequency‑domain fusion  
 - Final image synthesis  
 
-#📊 Evaluation Metrics Explained
+
+##  Evaluation Metrics Explained
 
 To assess the performance of different SD v1.5-based text-to-image generation methods, we report the following human-aligned metrics:
 
