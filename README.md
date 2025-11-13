@@ -93,8 +93,8 @@ cs v2).
 ## Results
 
 <p align="center">
-  <img src="img/tab1.png" width="50%">
-  <img src="img/tab2.png" width="50%">
+  <img src="img/tab1.png" width="45%">
+  <img src="img/tab2.png" width="45%">
 </p>
 
 CritiFusion demonstrates consistent improvements on alignment and aesthetic metrics such as PickScore, HPSv2, ImageReward, and Aesthetic Score.
