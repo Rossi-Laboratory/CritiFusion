@@ -17,7 +17,7 @@ Together, these components yield stronger semantic alignment and more realistic 
 ## Method
 
 <p align="center">
-  <img src="img/fig2.png" width="85%">
+  <img src="img/fig2-1.png" width="85%">
 </p>
 
 ## Gallery
