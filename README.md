@@ -3,6 +3,7 @@
 
 
 
+
 CritiFusion is an inference‑time refinement framework designed to enhance semantic alignment and visual quality in text‑to‑image diffusion models. It operates as a plug‑in stage that works with existing SDXL pipelines without any additional training.
 <p align="center">
   <img src="img/fig1.png" width="100%">
