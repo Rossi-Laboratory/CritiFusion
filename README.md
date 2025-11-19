@@ -150,16 +150,16 @@ Typical workflow inside the notebook:
 ## Evaluation Metrics Explained
 We evaluate each method using four human-aligned metrics:
 
-- PickScore ↑<br>
+- **PickScore **↑<br>
   Global human preference predictor that reflects overall image quality and prompt consistency.
 
-- HPSv2 ↑<br>
+- **HPSv2 ↑**<br>
   Measures semantic fidelity and compositional correctness relative to the text prompt.
 
-- ImageReward ↑<br>
+- **ImageReward ↑**<br>
   Reward-model-based assessment of text–image alignment and realism.
 
-- Aesthetic ↑<br>
+- **Aesthetic ↑**<br>
   Predicts visual appeal independently of the prompt, focusing on composition, lighting, and style.
 
 Higher is better for all four metrics.
