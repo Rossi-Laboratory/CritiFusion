@@ -139,28 +139,28 @@ Typical workflow inside the notebook:
 
 - Step 3: Run the end-to-end pipeline to obtain:
 
-- - Original base output
+  Original base output
 
-- - Refined outputs after CritiCore
+  Refined outputs after CritiCore
 
-- - Final images after SpecFusion
+  Final images after SpecFusion
 
 ---
 
 ## Evaluation Metrics Explained
 We evaluate each method using four human-aligned metrics:
 
-- PickScore ↑
-- Global human preference predictor that reflects overall image quality and prompt consistency.
+- PickScore ↑<br>
+  Global human preference predictor that reflects overall image quality and prompt consistency.
 
-- HPSv2 ↑
-- Measures semantic fidelity and compositional correctness relative to the text prompt.
+- HPSv2 ↑<br>
+  Measures semantic fidelity and compositional correctness relative to the text prompt.
 
-- ImageReward ↑
-- Reward-model-based assessment of text–image alignment and realism.
+- ImageReward ↑<br>
+  Reward-model-based assessment of text–image alignment and realism.
 
-- Aesthetic ↑
-- Predicts visual appeal independently of the prompt, focusing on composition, lighting, and style.
+- Aesthetic ↑<br>
+  Predicts visual appeal independently of the prompt, focusing on composition, lighting, and style.
 
 Higher is better for all four metrics.
 
