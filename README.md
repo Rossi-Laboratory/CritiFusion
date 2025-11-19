@@ -150,7 +150,7 @@ Typical workflow inside the notebook:
 ## Evaluation Metrics Explained
 We evaluate each method using four human-aligned metrics:
 
-- **PickScore **↑<br>
+- **PickScore↑**<br>
   Global human preference predictor that reflects overall image quality and prompt consistency.
 
 - **HPSv2 ↑**<br>
