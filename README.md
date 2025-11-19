@@ -139,11 +139,11 @@ Typical workflow inside the notebook:
 
 - Step 3: Run the end-to-end pipeline to obtain:
 
-  Original base output
+  - Original base output
 
-  Refined outputs after CritiCore
+  - Refined outputs after CritiCore
 
-  Final images after SpecFusion
+  - Final images after SpecFusion
 
 ---
 
