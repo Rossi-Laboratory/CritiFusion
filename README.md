@@ -143,7 +143,7 @@ This will:
   4. Return the final image
 ---
 
-🔧 CLI Usage
+## 🔧 CLI Usage
 
 This repository also includes ready-to-run scripts for quick experimentation.
 **Run end-to-end generation:**
