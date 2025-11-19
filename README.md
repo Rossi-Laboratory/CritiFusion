@@ -5,8 +5,8 @@
 
 </div>
 
-CritiFusion is a training-free, inference-time refinement framework designed to enhance semantic alignment and visual quality in text-to-image diffusion models.  
-It operates as a modular plug-in stage on top of SDXL pipelines, without any additional finetuning or reward optimization.
+CritiFusion is a training-free, inference-time refinement framework that enhances semantic alignment and visual fidelity in text-to-image diffusion models.  
+It operates as a modular plug-in on top of SDXL pipelines, requiring **no finetuning**, **no reward optimization**, and **no model modification**.
 
 <p align="center">
   <img src="img/fig1.png" width="100%">
@@ -14,57 +14,59 @@ It operates as a modular plug-in stage on top of SDXL pipelines, without any add
 
 ---
 
-## Overview
+# Overview
 
-Recent diffusion models achieve impressive photorealism, yet they still struggle with long, compositional, or attribute-heavy prompts. Typical failure modes include:
+Modern diffusion models achieve strong image quality yet struggle with complex or compositional prompts:
 
 - Missing or hallucinated objects  
-- Incorrect attributes (color, count, style)  
-- Inconsistent global structure when attempting local edits  
+- Incorrect attributes (color, count, orientation)  
+- Loss of global structure when correcting local details  
 
-CritiFusion addresses these issues with two complementary modules:
+CritiFusion introduces **two fully training-free modules** to address these issues:
 
-- **CritiCore** — a multimodal semantic critic built on an ensemble of LLMs plus a VLM.  
-  It rewrites the prompt into a structured, CLIP-friendly form while preserving the user’s intent.
-- **SpecFusion** — a spectral latent refinement stage that operates in the frequency domain.  
-  It preserves low-frequency structure while injecting high-frequency detail via a single SDXL img2img step.
+- **CritiCore** — a multimodal semantic critic built on an LLM ensemble plus a VLM.  
+  It rewrites or augments the user prompt with structured, CLIP-friendly semantic hints.
 
-Together, these components provide a **training-free refinement layer** that can be placed after any SDXL-based generator to improve alignment and perceptual quality.
+- **SpecFusion** — a spectral latent fusion module for SDXL.  
+  It preserves low-frequency structure while injecting high-frequency detail in one img2img step.
+
+Together, these modules provide a drop-in refinement layer that consistently boosts semantic accuracy and perceptual quality.
 
 ---
 
-## Method
+# Method
 
 <p align="center">
   <img src="img/fig2-1.png" width="85%">
 </p>
 
-### CritiCore: Multimodal Semantic Critique
+## CritiCore: Multimodal Semantic Critique
 
-CritiCore receives the original user prompt and, optionally, an initial image. It then:
+CritiCore receives the original prompt and optionally a base image.
 
-  1. Uses a **multi-LLM ensemble** to decompose the prompt into semantically coherent clauses and tags.  
-  2. Aggregates the ensemble outputs into a stable set of positive and negative tags, with CLIP-77-safe truncation and ordering.    
-  3. Invokes a **VLM-based critique** to analyze the mismatch between the initial image and the target description.  
-  4. Merges textual tags and VLM feedback into a refined prompt that is better aligned with the target semantics, while remaining faithful to user intent.
+It then:
 
-The result is a strengthened conditioning signal that rephrases the original instruction into a form more suitable for diffusion-based generators.
+1. Uses a **multi-LLM ensemble** to decompose the prompt into semantic clauses.  
+2. Aggregates these outputs into ordered positive and negative tags (CLIP-77 safe).  
+3. Invokes a **vision-language model** to critique image–text mismatch.  
+4. Merges both signals into a concise, alignment-optimized refined prompt.
 
-### SpecFusion: Spectral Latent Refinement
+The refined prompt strengthens the conditioning of the diffusion model without altering the user’s intent.
 
-SpecFusion operates on SDXL latents and combines:
+## SpecFusion: Spectral Latent Refinement
 
-- A **CADR-style mapping** from alignment scores to sampling parameters  
-  (e.g., guidance scale, number of steps, latent noise strength).  
-- A **frequency-domain fusion** step that merges a “structural” latent with a “detail-enhanced” latent:
-  - Low frequencies preserve composition and camera geometry.  
-  - High frequencies inject sharper textures and local details.  
+SpecFusion refines SDXL latents through:
 
-This yields a single-step img2img refinement that improves fidelity without destabilizing the original layout.
+- A **CADR-style mapping** from alignment scores to sampling parameters.  
+- A **frequency-domain fusion** between:
+  - a structural latent preserving geometry  
+  - a detail latent enhancing texture  
+
+The result is a stable, single-step img2img refinement improving sharpness, consistency, and adherence to content.
 
 ---
 
-## Gallery
+# Gallery
 
 <p align="center">
   <img src="img/fig 4-1.png" width="32%">
@@ -72,33 +74,32 @@ This yields a single-step img2img refinement that improves fidelity without dest
   <img src="img/fig 4-3.png" width="32%">
 </p>
 
-The gallery illustrates consistent improvements across diverse prompts and artistic styles, including complex indoor scenes, crowds, landscapes, and abstract compositions.
-
 ---
 
-## Installation
+# Installation
 
+### 1. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
+### 2. Set your Together API key
+Required for LLM/VLM critique.
 
-Set your Together API key (required for LLM and VLM critique):
+Linux / macOS:
 
 ```bash
-
 export TOGETHER_API_KEY=your_key_here
 ```
-On Windows (PowerShell):
-
+Windows PowerShell:
 ```bash
 $env:TOGETHER_API_KEY = "your_key_here"
 ```
 
 ---
 ## Models and Configuration
-CritiFusion relies on Together-hosted LLMs and VLMs. Model availability may change over time.
+CritiFusion uses Together-hosted LLMs and VLMs. Model availability may change.
 
-You can configure model choices in the code or configuration files, for example:
+Edit the configuration inside the repository (e.g., configs/criticore.yaml) or modify the Python files:
 
 ```bash
 
@@ -115,35 +116,57 @@ AGGREGATOR_MODEL = "Qwen/Qwen2.5-72B-Instruct-Turbo"
 VLM_CANDIDATES = [
     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
 ]
-```
-If you encounter API errors or model unavailability, update these lists to currently supported models and re-run.
 
+```
 ---
 
-## Running CritiFusion
-In the minimal setup, you can use the notebook critifusion.ipynb (or equivalent scripts) to:
+## 🔥 Quick Start (Minimal Example)
+After installation, you can run CritiFusion in three lines:
+```python
+from critifusion.main import run_critifusion
 
-Generate base SDXL images from prompts.
+img = run_critifusion(
+    prompt="a knight riding a dragon made of crystal",
+    seed=2025
+)
 
-Run CritiCore for multi-LLM decomposition, VLM critique, and prompt refinement.
+img.save("output.png")
+```
+This will:
 
-Apply SpecFusion to perform latent-level refinement using CADR-mapped parameters.
+  1. Generate a base SDXL image
+  
+  2. Run CritiCore (LLM + VLM refinement)
+  
+  3. Run SpecFusion (frequency-domain refinement)
+  
+  4. Return the final image
+---
 
-Visualize different variants (baseline, multi-LLM only, VLM only, full CritiFusion).
+🔧 CLI Usage
 
-Typical workflow inside the notebook:
+This repository also includes ready-to-run scripts for quick experimentation.
+**Run end-to-end generation:**
+```bash
+python scripts/run_generate.py \
+    --prompt "a futuristic city made of glass" \
+    --seed 123 \
+    --output out.png
+```
+**Run only CritiCore (prompt refinement):**
+```bash
+python scripts/run_generate.py \
+    --prompt "crowded night market with neon signs" \
+    --refine_only \
+    --output refined_prompt.txt
 
-- Step 1: Load SDXL base and img2img pipelines.
-
-- Step 2: Define LLM/VLM model lists and CritiCore presets.
-
-- Step 3: Run the end-to-end pipeline to obtain:
-
-  - Original base output
-
-  - Refined outputs after CritiCore
-
-  - Final images after SpecFusion
+```
+**Run only SpecFusion:**
+```bash
+python scripts/run_generate.py \
+    --prompt "golden forest at sunrise" \
+    --apply_specfusion_only
+```
 
 ---
 
