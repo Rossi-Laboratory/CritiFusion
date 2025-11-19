@@ -43,10 +43,10 @@ Together, these components provide a **training-free refinement layer** that can
 
 CritiCore receives the original user prompt and, optionally, an initial image. It then:
 
-1. Uses a **multi-LLM ensemble** to decompose the prompt into semantically coherent clauses and tags.  
-2. Aggregates the ensemble outputs into a stable set of positive and negative tags, with CLIP-77-safe truncation and ordering.  
-3. Invokes a **VLM-based critique** to analyze the mismatch between the initial image and the target description.  
-4. Merges textual tags and VLM feedback into a refined prompt that is better aligned with the target semantics, while remaining faithful to user intent.
+  1. Uses a **multi-LLM ensemble** to decompose the prompt into semantically coherent clauses and tags.  
+  2. Aggregates the ensemble outputs into a stable set of positive and negative tags, with CLIP-77-safe truncation and ordering.    
+  3. Invokes a **VLM-based critique** to analyze the mismatch between the initial image and the target description.  
+  4. Merges textual tags and VLM feedback into a refined prompt that is better aligned with the target semantics, while remaining faithful to user intent.
 
 The result is a strengthened conditioning signal that rephrases the original instruction into a form more suitable for diffusion-based generators.
 
@@ -133,17 +133,17 @@ Visualize different variants (baseline, multi-LLM only, VLM only, full CritiFusi
 
 Typical workflow inside the notebook:
 
-Step 1: Load SDXL base and img2img pipelines.
+- Step 1: Load SDXL base and img2img pipelines.
 
-Step 2: Define LLM/VLM model lists and CritiCore presets.
+- Step 2: Define LLM/VLM model lists and CritiCore presets.
 
-Step 3: Run the end-to-end pipeline to obtain:
+- Step 3: Run the end-to-end pipeline to obtain:
 
-Original base output
+- - Original base output
 
-Refined outputs after CritiCore
+- - Refined outputs after CritiCore
 
-Final images after SpecFusion
+- - Final images after SpecFusion
 
 ---
 
@@ -151,16 +151,16 @@ Final images after SpecFusion
 We evaluate each method using four human-aligned metrics:
 
 - PickScore ↑
-  Global human preference predictor that reflects overall image quality and prompt consistency.
+- Global human preference predictor that reflects overall image quality and prompt consistency.
 
 - HPSv2 ↑
-  Measures semantic fidelity and compositional correctness relative to the text prompt.
+- Measures semantic fidelity and compositional correctness relative to the text prompt.
 
 - ImageReward ↑
-  Reward-model-based assessment of text–image alignment and realism.
+- Reward-model-based assessment of text–image alignment and realism.
 
 - Aesthetic ↑
-Predicts visual appeal independently of the prompt, focusing on composition, lighting, and style.
+- Predicts visual appeal independently of the prompt, focusing on composition, lighting, and style.
 
 Higher is better for all four metrics.
 
