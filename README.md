@@ -150,16 +150,16 @@ Final images after SpecFusion
 ## Evaluation Metrics Explained
 We evaluate each method using four human-aligned metrics:
 
-PickScore ↑
-Global human preference predictor that reflects overall image quality and prompt consistency.
+- PickScore ↑
+  Global human preference predictor that reflects overall image quality and prompt consistency.
 
-HPSv2 ↑
-Measures semantic fidelity and compositional correctness relative to the text prompt.
+- HPSv2 ↑
+  Measures semantic fidelity and compositional correctness relative to the text prompt.
 
-ImageReward ↑
-Reward-model-based assessment of text–image alignment and realism.
+- ImageReward ↑
+  Reward-model-based assessment of text–image alignment and realism.
 
-Aesthetic ↑
+- Aesthetic ↑
 Predicts visual appeal independently of the prompt, focusing on composition, lighting, and style.
 
 Higher is better for all four metrics.
@@ -174,8 +174,8 @@ The framework closes much of the gap to training-based alignment methods while p
 ---
 
 ## Limitations and Notes
-CritiFusion depends on external LLM and VLM APIs, which introduces latency and requires network access.
+- CritiFusion depends on external LLM and VLM APIs, which introduces latency and requires network access.
 
-The effectiveness of CritiCore depends on the quality and diversity of the underlying language models.
+- The effectiveness of CritiCore depends on the quality and diversity of the underlying language models.
 
-SpecFusion is currently tailored to SDXL latent geometry; extending to other architectures may require additional tuning.
+- SpecFusion is currently tailored to SDXL latent geometry; extending to other architectures may require additional tuning.
