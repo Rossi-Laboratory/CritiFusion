@@ -90,8 +90,10 @@ export TOGETHER_API_KEY=your_key_here
 ```
 On Windows (PowerShell):
 
-
+```bash
 $env:TOGETHER_API_KEY = "your_key_here"
+```
+
 ---
 ## Models and Configuration
 CritiFusion relies on Together-hosted LLMs and VLMs. Model availability may change over time.
