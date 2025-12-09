@@ -1,227 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="CritiFusion: Semantic Critique and Spectral Alignment for Faithful Text-to-Image Generation">
-  <meta property="og:title" content="CritiFusion: Semantic Critique and Spectral Alignment"/>
-  <meta property="og:description" content="CVPR 2026 Project Page for CritiFusion"/>
-  <meta property="og:url" content=""/>
-  <meta property="og:image" content="img/fig1.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-  <meta name="twitter:title" content="CritiFusion">
-  <meta name="twitter:description" content="Semantic Critique and Spectral Alignment for Faithful Text-to-Image Generation">
-  <meta name="twitter:image" content="img/fig1.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="Text-to-Image, Diffusion Models, Semantic Alignment, Spectral Analysis, CVPR 2026">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="UTF-8">
   <title>CritiFusion: Semantic Critique and Spectral Alignment</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+    .nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+    }
+    .section {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .section img.full {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .cards img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .cards img:hover {
+      transform: scale(1.03);
+    }
+    .code-block {
+      background: #f4f4f4;
+      border-left: 4px solid #ccc;
+      padding: 1rem;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">CritiFusion: Semantic Critique and Spectral Alignment for Faithful Text-to-Image Generation</h1>
-            
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="#" target="_blank">Alex Chen</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="#" target="_blank">Co-Author Name</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="#" target="_blank">Co-Author Name</a><sup>1</sup>
-              </span>
-            </div>
+<header>
+  <h1>CritiFusion: Semantic Critique and Spectral Alignment</h1>
+  <p>CVPR 2026 Submission #9907</p>
+</header>
 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Institution Name,</span>
-              <span class="author-block"><sup>2</sup>Another Institution</span>
-              <br>
-              <span class="author-block"><strong>CVPR 2026</strong></span>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="static/pdfs/paper.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-
-              <span class="link-block">
-                <a href="https://github.com/YOUR_USERNAME/REPO_NAME" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
-              </a>
-            </span>
-
-            <span class="link-block">
-              <a href="#" target="_blank"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="ai ai-arxiv"></i>
-              </span>
-              <span>arXiv</span>
-            </a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="nav">
+  <a href="#">[Paper]</a>
+  <a href="#">[arXiv]</a>
+  <a href="https://github.com/Rossi-Laboratory/CritiFusion">[Code]</a>
+  <a href="#">[Dataset]</a>
 </div>
-</div>
-</section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="img/fig1.png" alt="CritiFusion Teaser" style="width:100%; height:auto;">
-      <h2 class="subtitle has-text-centered">
-        <strong>Figure 1. Diverse high-fidelity generations by our CritiFusion model.</strong> 
-        Our method synthesizes diverse artistic and photorealistic scenes with improved prompt alignment and high visual fidelity.
-      </h2>
-    </div>
-  </div>
-</section>
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Recent text-to-image diffusion models have achieved remarkable visual fidelity but often struggle with semantic alignment to complex prompts. We introduce <strong>CritiFusion</strong>, a novel inference-time framework that integrates a multi-modal semantic critique mechanism with frequency-domain refinement to improve text-to-image consistency and detail.
-          </p>
-          <p>
-            The proposed <strong>CritiCore</strong> module leverages a vision-language model and multiple large language models to enrich the prompt context and produce high-level semantic feedback, guiding the diffusion process to better align generated content with the prompt's intent. Additionally, <strong>SpecFusion</strong> merges intermediate generation states in the spectral domain, injecting coarse structural information while preserving high-frequency details. 
-          </p>
-          <p>
-             No additional model training is required. CritiFusion serves as a plug-in refinement stage compatible with existing diffusion backbones. Experiments on standard benchmarks show that our method notably improves human-aligned metrics of text-to-image correspondence and visual quality.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Method Overview</h2>
-        <div class="content has-text-justified">
-          <img src="img/fig2-1.png" alt="Method Overview" style="width:100%; margin-bottom: 20px;">
-          <p>
-            <strong>Figure 2. Overview of our framework.</strong> Our pipeline consists of two main modules:
-            <br>
-            <strong>(1) CritiCore:</strong> Fuses VLM captions with Multi-LLM feedback to produce a refined prompt embedding. A diffusion backbone samples a base latent which is guided by the refined prompt to partially re-denoise it.
-            <br>
-            <strong>(2) SpecFusion:</strong> Performs frequency gating where the high-frequency spectrum of the refined latent is combined with the low-frequency spectrum of the base latent. This two-stage refinement corrects semantic misalignment, enriches detail, and preserves global coherence.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h2>✨ Teaser</h2>
+  <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/fig1.png" alt="Teaser" class="full">
 </section>
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Qualitative Comparison</h2>
-      <div class="content has-text-centered">
-        <img src="img/fig3.png" alt="Qualitative Comparison" style="width:100%; margin-bottom: 10px;">
-        <p>
-          <strong>Figure 3. Qualitative comparison on various prompts.</strong> 
-          We compare images generated by SDXL, FLUX, Diffusion-DPO, SPO, DyMO, and our CritiFusion method (far right). Our results show superior realism and semantic alignment, maintaining balanced composition and high-fidelity rendering.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+
 <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
-    
-    <div class="columns is-centered">
-      <div class="column is-10">
-        
-        <div class="content has-text-centered" style="margin-bottom: 40px;">
-          <img src="img/tab1.png" alt="Table 1" style="max-width: 80%;">
-          <p class="subtitle is-6">
-            <strong>Table 1.</strong> Quantitative comparison on SD v1.5-based methods. CritiFusion consistently improves across all evaluation metrics (PickScore, HPSv2, ImageReward, Aesthetic).
-          </p>
-        </div>
+  <h2>🧠 Abstract</h2>
+  <p>
+    CritiFusion introduces a training-free, inference-time refinement framework to improve text-to-image generation. By combining semantic critique from a multi-agent VLM+LLM system with spectral fusion in the frequency domain, our method significantly enhances prompt alignment and image fidelity across Stable Diffusion and SDXL backbones.
+  </p>
+</section>
 
-        <div class="content has-text-centered">
-          <img src="img/tab2.png" alt="Table 2" style="max-width: 80%;">
-          <p class="subtitle is-6">
-            <strong>Table 2.</strong> Quantitative comparison on SDXL-based methods. Our method achieves state-of-the-art performance, surpassing baselines like SDXL, DNO, and FLUX on key alignment metrics.
-          </p>
-        </div>
+<section class="section">
+  <h2>⚙️ Method Overview</h2>
+  <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/fig2-1.png" alt="Method Overview" class="full">
+</section>
 
-      </div>
-    </div>
+<section class="section">
+  <h2>🎨 Qualitative Comparison</h2>
+  <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/fig3.png" alt="Qualitative Results" class="full">
+</section>
+
+<section class="section">
+  <h2>📊 Quantitative Results</h2>
+  <div class="cards">
+    <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/tab1.png" alt="Table 1">
+    <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/tab2.png" alt="Table 2">
   </div>
 </section>
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title has-text-centered">Paper</h2>
-      <iframe src="static/pdfs/paper.pdf" width="100%" height="800px">
-      </iframe>
-    </div>
+
+<section class="section">
+  <h2>🔁 Plug-in Enhancements</h2>
+  <div class="cards">
+    <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/fig%204-1.png" alt="FLUX vs FLUX+Ours">
+    <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/fig%204-2.png" alt="SPO vs SPO+Ours">
+    <img src="https://raw.githubusercontent.com/Rossi-Laboratory/CritiFusion/main/img/fig%204-3.png" alt="DPO vs DPO+Ours">
   </div>
 </section>
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{cvpr2026critifusion,
-  title={CritiFusion: Semantic Critique and Spectral Alignment for Faithful Text-to-Image Generation}
-}</code></pre>
+
+<section class="section">
+  <h2>📚 BibTeX</h2>
+  <div class="code-block">
+@inproceedings{critifusion2026,<br>
+&nbsp;&nbsp;title={CritiFusion: Semantic Critique and Spectral Alignment for Faithful Text-to-Image Generation},<br>
+&nbsp;&nbsp;author={Anonymous},<br>
+&nbsp;&nbsp;booktitle={CVPR},<br>
+&nbsp;&nbsp;year={2026}<br>
+}
   </div>
 </section>
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<footer>
+  Built by Rossi Laboratory. Paper #9907 — CVPR 2026 Submission.
 </footer>
 
 </body>
