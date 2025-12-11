@@ -12,6 +12,12 @@ It operates as a modular plug-in on top of SDXL pipelines, requiring **no finetu
 
 ---
 
+## 🌐 Project Links
+
+- [📄 Paper]  |  [🔗 Project Page](https://rossi-laboratory.github.io/CritiFusion/)  |  [🎞️ Video]  |  [💻 Code] |  [📖 Wiki]
+
+---
+
 # Overview
 
 Modern diffusion models achieve strong image quality yet struggle with complex or compositional prompts:
