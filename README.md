@@ -14,7 +14,7 @@ It operates as a modular plug-in on top of SDXL pipelines, requiring **no finetu
 
 ## 🌐 Project Links
 
-- [📄 Paper]  |  [🔗 Project Page](https://rossi-laboratory.github.io/CritiFusion/)  |  [🎞️ Video]  |  [💻 Code] |  [📖 Wiki]
+- [📄 Paper]  |  [🔗 Project Page](https://cvpr2026-anonymous.github.io/CritiFusion/)  |  [🎞️ Video]  |  [💻 Code] |  [📖 Wiki]
 
 ---
 
