@@ -70,16 +70,6 @@ The result is a stable, single-step img2img refinement improving sharpness, cons
 
 ---
 
-# Gallery
-
-<p align="center">
-  <img src="img/fig 4-1.png" width="32%">
-  <img src="img/fig 4-2.png" width="32%">
-  <img src="img/fig 4-3.png" width="32%">
-</p>
-
----
-
 # Installation
 
 ### 1. Install dependencies
@@ -190,13 +180,6 @@ We evaluate each method using four human-aligned metrics:
   Predicts visual appeal independently of the prompt, focusing on composition, lighting, and style.
 
 Higher is better for all four metrics.
-
----
-
-## Results
-<p align="center"> <img src="img/tab1.png" width="45%"> <img src="img/tab2.png" width="45%"> </p>
-Across multiple backbones and prompt sets, CritiFusion delivers consistent gains in PickScore, HPSv2, ImageReward, and Aesthetic Score.
-The framework closes much of the gap to training-based alignment methods while preserving the simplicity of a training-free, plug-in design.
 
 ---
 
