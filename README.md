@@ -10,11 +10,6 @@ It operates as a modular plug-in on top of SDXL pipelines, requiring **no finetu
   <img src="img/fig1.png" width="100%">
 </p>
 
----
-
-## 🌐 Project Links
-
-- [📄 Paper]  |  [🔗 Project Page](https://cvpr2026-anonymous.github.io/CritiFusion/)  |  [🎞️ Video]  |  [💻 demo](https://huggingface.co/spaces/yfyangd/CritiFusion) |  [📖 Wiki]
 
 ---
 
