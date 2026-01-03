@@ -1,9 +1,10 @@
 # CritiFusion: Semantic and Spectral Refinement for Text-to-Image Diffusion
-## Project Links
+
+# Project Links
 
 - [Paper](https://www.arxiv.org/abs/2512.22681)  |  [Project Page](https://rossi-laboratory.github.io/CritiFusion/)  |  [Video]  |  [Code](https://github.com/Rossi-Laboratory/CritiFusion)  |  [Demo](https://huggingface.co/spaces/yfyangd/CritiFusion)
 
-
+---
 
 CritiFusion is a training-free, inference-time refinement framework that enhances semantic alignment and visual fidelity in text-to-image diffusion models.  
 It operates as a modular plug-in on top of SDXL pipelines, requiring **no finetuning**, **no reward optimization**, and **no model modification**.
