@@ -1,8 +1,13 @@
 # CritiFusion: Semantic and Spectral Refinement for Text-to-Image Diffusion
 
-# Project Links
 
-- [Paper](https://www.arxiv.org/abs/2512.22681)  |  [Project Page](https://rossi-laboratory.github.io/CritiFusion/)  |  [Video]  |  [Code](https://github.com/Rossi-Laboratory/CritiFusion)  |  [Demo](https://huggingface.co/spaces/yfyangd/CritiFusion)
+<p align="center">
+  <a href="https://www.arxiv.org/abs/2512.22681">Paper</a> &nbsp; | &nbsp;
+  <a href="https://rossi-laboratory.github.io/CritiFusion/">Project Page</a> &nbsp; | &nbsp;
+  Video &nbsp; | &nbsp;
+  <a href="https://github.com/Rossi-Laboratory/CritiFusion">Code</a> &nbsp; | &nbsp;
+  <a href="https://huggingface.co/spaces/yfyangd/CritiFusion">Demo</a>
+</p>
 
 ---
 
