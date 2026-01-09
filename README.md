@@ -2,7 +2,8 @@
 
 
 <p align="center">
-  📄 <a href="https://www.arxiv.org/abs/2512.22681">Paper</a> &nbsp; | &nbsp;
+  📄 <a href="https://www.arxiv.org/abs/2512.22681">arxiv</a> &nbsp; | &nbsp;
+  📄 <a href="https://huggingface.co/papers/2512.22681">hugging face</a> &nbsp; | &nbsp;
   🌐 <a href="https://rossi-laboratory.github.io/CritiFusion/">Project Page</a> &nbsp; | &nbsp;
   💻 <a href="https://github.com/Rossi-Laboratory/CritiFusion">Code</a> &nbsp; | &nbsp;
   🤗 <a href="https://huggingface.co/spaces/yfyangd/CritiFusion">Demo</a> &nbsp; | &nbsp;
