@@ -1,14 +1,12 @@
 # CritiFusion: Semantic and Spectral Refinement for Text-to-Image Diffusion
 
 
-<p align="center">
-  📄 <a href="https://www.arxiv.org/abs/2512.22681">arxiv</a> &nbsp; | &nbsp;
-  📄 <a href="https://huggingface.co/papers/2512.22681">hugging face</a> &nbsp; | &nbsp;
-  🌐 <a href="https://rossi-laboratory.github.io/CritiFusion/">Project Page</a> &nbsp; | &nbsp;
-  💻 <a href="https://github.com/Rossi-Laboratory/CritiFusion">Code</a> &nbsp; | &nbsp;
-  🤗 <a href="https://huggingface.co/spaces/yfyangd/CritiFusion">Demo</a> &nbsp; | &nbsp;
-  🎬 Video (coming soon);
-</p>
+[![arXiv](https://img.shields.io/badge/arXiv-2512.22681-b31b1b.svg)](https://arxiv.org/abs/2512.22681)
+[![Hugging Face Papers](https://img.shields.io/badge/HuggingFace-Paper-yellow)](https://huggingface.co/papers/2512.22681)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://rossi-laboratory.github.io/CritiFusion/)
+[![Code](https://img.shields.io/badge/GitHub-Code-black?logo=github)](https://github.com/Rossi-Laboratory/CritiFusion)
+[![Demo](https://img.shields.io/badge/HuggingFace-Demo-orange?logo=huggingface)](https://huggingface.co/spaces/yfyangd/CritiFusion)
+🎬 Video (coming soon);
 
 
 ---
